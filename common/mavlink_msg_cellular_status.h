@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_CELLULAR_STATUS 334
 
-
+MAVPACKED(
 typedef struct __mavlink_cellular_status_t {
  uint16_t mcc; /*<  Mobile country code. If unknown, set to UINT16_MAX*/
  uint16_t mnc; /*<  Mobile network code. If unknown, set to UINT16_MAX*/
@@ -12,7 +12,7 @@ typedef struct __mavlink_cellular_status_t {
  uint8_t failure_reason; /*<  Failure reason when status in in CELLUAR_STATUS_FAILED*/
  uint8_t type; /*<  Cellular network radio type: gsm, cdma, lte...*/
  uint8_t quality; /*<  Signal quality in percent. If unknown, set to UINT8_MAX*/
-} mavlink_cellular_status_t;
+}) mavlink_cellular_status_t;
 
 #define MAVLINK_MSG_ID_CELLULAR_STATUS_LEN 10
 #define MAVLINK_MSG_ID_CELLULAR_STATUS_MIN_LEN 10

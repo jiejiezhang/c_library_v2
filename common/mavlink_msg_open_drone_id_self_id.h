@@ -3,14 +3,14 @@
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SELF_ID 12903
 
-
+MAVPACKED(
 typedef struct __mavlink_open_drone_id_self_id_t {
  uint8_t target_system; /*<  System ID (0 for broadcast).*/
  uint8_t target_component; /*<  Component ID (0 for broadcast).*/
  uint8_t id_or_mac[20]; /*<  Only used for drone ID data received from other UAs. See detailed description at https://mavlink.io/en/services/opendroneid.html. */
  uint8_t description_type; /*<  Indicates the type of the description field.*/
  char description[23]; /*<  Text description or numeric value expressed as ASCII characters. Shall be filled with nulls in the unused portion of the field.*/
-} mavlink_open_drone_id_self_id_t;
+}) mavlink_open_drone_id_self_id_t;
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SELF_ID_LEN 46
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SELF_ID_MIN_LEN 46

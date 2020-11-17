@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_DEVICE_OP_READ_REPLY 11001
 
-
+MAVPACKED(
 typedef struct __mavlink_device_op_read_reply_t {
  uint32_t request_id; /*<  Request ID - copied from request.*/
  uint8_t result; /*<  0 for success, anything else is failure code.*/
@@ -11,7 +11,7 @@ typedef struct __mavlink_device_op_read_reply_t {
  uint8_t count; /*<  Count of bytes read.*/
  uint8_t data[128]; /*<  Reply data.*/
  uint8_t bank; /*<  Bank number.*/
-} mavlink_device_op_read_reply_t;
+}) mavlink_device_op_read_reply_t;
 
 #define MAVLINK_MSG_ID_DEVICE_OP_READ_REPLY_LEN 136
 #define MAVLINK_MSG_ID_DEVICE_OP_READ_REPLY_MIN_LEN 135

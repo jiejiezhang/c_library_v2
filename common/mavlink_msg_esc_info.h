@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_ESC_INFO 290
 
-
+MAVPACKED(
 typedef struct __mavlink_esc_info_t {
  uint64_t time_usec; /*< [us] Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude the number.*/
  uint32_t error_count[4]; /*<  Number of reported errors by each ESC since boot.*/
@@ -14,7 +14,7 @@ typedef struct __mavlink_esc_info_t {
  uint8_t connection_type; /*<  Connection type protocol for all ESC.*/
  uint8_t info; /*<  Information regarding online/offline status of each ESC.*/
  uint8_t temperature[4]; /*< [degC] Temperature measured by each ESC. UINT8_MAX if data not supplied by ESC.*/
-} mavlink_esc_info_t;
+}) mavlink_esc_info_t;
 
 #define MAVLINK_MSG_ID_ESC_INFO_LEN 42
 #define MAVLINK_MSG_ID_ESC_INFO_MIN_LEN 42

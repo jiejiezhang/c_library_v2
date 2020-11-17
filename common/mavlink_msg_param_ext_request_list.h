@@ -3,12 +3,12 @@
 
 #define MAVLINK_MSG_ID_PARAM_EXT_REQUEST_LIST 321
 
-
+MAVPACKED(
 typedef struct __mavlink_param_ext_request_list_t {
  uint8_t target_system; /*<  System ID*/
  uint8_t target_component; /*<  Component ID*/
  uint8_t trimmed; /*<  Request _TRIMMED variants of PARAM_EXT_ messages. Set to 1 if _TRIMMED message variants are supported, and 0 otherwise. This signals the recipient that _TRIMMED messages are supported by the sender (and should be used if supported by the recipient).*/
-} mavlink_param_ext_request_list_t;
+}) mavlink_param_ext_request_list_t;
 
 #define MAVLINK_MSG_ID_PARAM_EXT_REQUEST_LIST_LEN 3
 #define MAVLINK_MSG_ID_PARAM_EXT_REQUEST_LIST_MIN_LEN 2

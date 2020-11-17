@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_COMPONENT_INFORMATION 395
 
-
+MAVPACKED(
 typedef struct __mavlink_component_information_t {
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
  uint32_t metadata_type; /*<  The type of metadata being requested.*/
@@ -11,7 +11,7 @@ typedef struct __mavlink_component_information_t {
  uint32_t translation_uid; /*<  Unique uid for the translation file associated with the metadata.*/
  char metadata_uri[70]; /*<  Component definition URI. If prefix mavlinkftp:// file is downloaded from vehicle over mavlink ftp protocol. If prefix http[s]:// file is downloaded over internet. Files are json format. They can end in .gz to indicate file is in gzip format.*/
  char translation_uri[70]; /*<  The translations for strings within the metadata file. If null the either do not exist or may be included in the metadata file itself. The translations specified here supercede any which may be in the metadata file itself. The uri format is the same as component_metadata_uri . Files are in Json Translation spec format. Empty string indicates no tranlsation file.*/
-} mavlink_component_information_t;
+}) mavlink_component_information_t;
 
 #define MAVLINK_MSG_ID_COMPONENT_INFORMATION_LEN 156
 #define MAVLINK_MSG_ID_COMPONENT_INFORMATION_MIN_LEN 156

@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG 11033
 
-
+MAVPACKED(
 typedef struct __mavlink_osd_param_config_t {
  uint32_t request_id; /*<  Request ID - copied to reply.*/
  float min_value; /*<  OSD parameter minimum value.*/
@@ -15,7 +15,7 @@ typedef struct __mavlink_osd_param_config_t {
  uint8_t osd_index; /*<  OSD parameter display index.*/
  char param_id[16]; /*<  Onboard parameter id, terminated by NULL if the length is less than 16 human-readable chars and WITHOUT null termination (NULL) byte if the length is exactly 16 chars - applications have to provide 16+1 bytes storage if the ID is stored as string*/
  uint8_t config_type; /*<  Config type.*/
-} mavlink_osd_param_config_t;
+}) mavlink_osd_param_config_t;
 
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG_LEN 37
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG_MIN_LEN 37

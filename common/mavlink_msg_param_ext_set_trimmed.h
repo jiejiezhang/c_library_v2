@@ -3,14 +3,14 @@
 
 #define MAVLINK_MSG_ID_PARAM_EXT_SET_TRIMMED 326
 
-
+MAVPACKED(
 typedef struct __mavlink_param_ext_set_trimmed_t {
  uint8_t target_system; /*<  System ID*/
  uint8_t target_component; /*<  Component ID*/
  uint8_t param_type; /*<  Parameter type.*/
  char param_id[16]; /*<  Parameter id, terminated by NULL if the length is less than 16 human-readable chars and WITHOUT null termination (NULL) byte if the length is exactly 16 chars - applications have to provide 16+1 bytes storage if the ID is stored as string*/
  char param_value[128]; /*<  Parameter value (zeros get trimmed)*/
-} mavlink_param_ext_set_trimmed_t;
+}) mavlink_param_ext_set_trimmed_t;
 
 #define MAVLINK_MSG_ID_PARAM_EXT_SET_TRIMMED_LEN 147
 #define MAVLINK_MSG_ID_PARAM_EXT_SET_TRIMMED_MIN_LEN 147

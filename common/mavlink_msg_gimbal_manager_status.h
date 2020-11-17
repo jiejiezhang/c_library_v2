@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_STATUS 281
 
-
+MAVPACKED(
 typedef struct __mavlink_gimbal_manager_status_t {
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
  uint32_t flags; /*<  High level gimbal manager flags currently applied.*/
@@ -12,7 +12,7 @@ typedef struct __mavlink_gimbal_manager_status_t {
  uint8_t primary_control_compid; /*<  Component ID of MAVLink component with primary control, 0 for none.*/
  uint8_t secondary_control_sysid; /*<  System ID of MAVLink component with secondary control, 0 for none.*/
  uint8_t secondary_control_compid; /*<  Component ID of MAVLink component with secondary control, 0 for none.*/
-} mavlink_gimbal_manager_status_t;
+}) mavlink_gimbal_manager_status_t;
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_STATUS_LEN 13
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_STATUS_MIN_LEN 13

@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_CAMERA_FOV_STATUS 271
 
-
+MAVPACKED(
 typedef struct __mavlink_camera_fov_status_t {
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
  int32_t lat_camera; /*< [degE7] Latitude of camera (INT32_MAX if unknown).*/
@@ -15,7 +15,7 @@ typedef struct __mavlink_camera_fov_status_t {
  float q[4]; /*<  Quaternion of camera orientation (w, x, y, z order, zero-rotation is 1, 0, 0, 0)*/
  float hfov; /*< [deg] Horizontal field of view (NaN if unknown).*/
  float vfov; /*< [deg] Vertical field of view (NaN if unknown).*/
-} mavlink_camera_fov_status_t;
+}) mavlink_camera_fov_status_t;
 
 #define MAVLINK_MSG_ID_CAMERA_FOV_STATUS_LEN 52
 #define MAVLINK_MSG_ID_CAMERA_FOV_STATUS_MIN_LEN 52

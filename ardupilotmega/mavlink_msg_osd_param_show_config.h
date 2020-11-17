@@ -3,14 +3,14 @@
 
 #define MAVLINK_MSG_ID_OSD_PARAM_SHOW_CONFIG 11035
 
-
+MAVPACKED(
 typedef struct __mavlink_osd_param_show_config_t {
  uint32_t request_id; /*<  Request ID - copied to reply.*/
  uint8_t target_system; /*<  System ID.*/
  uint8_t target_component; /*<  Component ID.*/
  uint8_t osd_screen; /*<  OSD parameter screen index.*/
  uint8_t osd_index; /*<  OSD parameter display index.*/
-} mavlink_osd_param_show_config_t;
+}) mavlink_osd_param_show_config_t;
 
 #define MAVLINK_MSG_ID_OSD_PARAM_SHOW_CONFIG_LEN 8
 #define MAVLINK_MSG_ID_OSD_PARAM_SHOW_CONFIG_MIN_LEN 8

@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_GIMBAL_DEVICE_INFORMATION 283
 
-
+MAVPACKED(
 typedef struct __mavlink_gimbal_device_information_t {
  uint64_t uid; /*<  UID of gimbal hardware (0 if unknown).*/
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
@@ -20,7 +20,7 @@ typedef struct __mavlink_gimbal_device_information_t {
  char vendor_name[32]; /*<  Name of the gimbal vendor.*/
  char model_name[32]; /*<  Name of the gimbal model.*/
  char custom_name[32]; /*<  Custom name of the gimbal given to it by the user.*/
-} mavlink_gimbal_device_information_t;
+}) mavlink_gimbal_device_information_t;
 
 #define MAVLINK_MSG_ID_GIMBAL_DEVICE_INFORMATION_LEN 144
 #define MAVLINK_MSG_ID_GIMBAL_DEVICE_INFORMATION_MIN_LEN 144

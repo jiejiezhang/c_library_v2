@@ -3,12 +3,12 @@
 
 #define MAVLINK_MSG_ID_COMMAND_CANCEL 80
 
-
+MAVPACKED(
 typedef struct __mavlink_command_cancel_t {
  uint16_t command; /*<  Command ID (of command to cancel).*/
  uint8_t target_system; /*<  System executing long running command. Should not be broadcast (0).*/
  uint8_t target_component; /*<  Component executing long running command.*/
-} mavlink_command_cancel_t;
+}) mavlink_command_cancel_t;
 
 #define MAVLINK_MSG_ID_COMMAND_CANCEL_LEN 4
 #define MAVLINK_MSG_ID_COMMAND_CANCEL_MIN_LEN 4

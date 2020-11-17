@@ -3,14 +3,14 @@
 
 #define MAVLINK_MSG_ID_ESC_STATUS 291
 
-
+MAVPACKED(
 typedef struct __mavlink_esc_status_t {
  uint64_t time_usec; /*< [us] Timestamp (UNIX Epoch time or time since system boot). The receiving end can infer timestamp format (since 1.1.1970 or since system boot) by checking for the magnitude the number.*/
  int32_t rpm[4]; /*< [rpm] Reported motor RPM from each ESC (negative for reverse rotation).*/
  float voltage[4]; /*< [V] Voltage measured from each ESC.*/
  float current[4]; /*< [A] Current measured from each ESC.*/
  uint8_t index; /*<  Index of the first ESC in this message. minValue = 0, maxValue = 60, increment = 4.*/
-} mavlink_esc_status_t;
+}) mavlink_esc_status_t;
 
 #define MAVLINK_MSG_ID_ESC_STATUS_LEN 57
 #define MAVLINK_MSG_ID_ESC_STATUS_MIN_LEN 57

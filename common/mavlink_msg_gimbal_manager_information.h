@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_INFORMATION 280
 
-
+MAVPACKED(
 typedef struct __mavlink_gimbal_manager_information_t {
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
  uint32_t cap_flags; /*<  Bitmap of gimbal capability flags.*/
@@ -14,7 +14,7 @@ typedef struct __mavlink_gimbal_manager_information_t {
  float yaw_min; /*< [rad] Minimum yaw angle (positive: to the right, negative: to the left)*/
  float yaw_max; /*< [rad] Maximum yaw angle (positive: to the right, negative: to the left)*/
  uint8_t gimbal_device_id; /*<  Gimbal device ID that this gimbal manager is responsible for.*/
-} mavlink_gimbal_manager_information_t;
+}) mavlink_gimbal_manager_information_t;
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_INFORMATION_LEN 33
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_INFORMATION_MIN_LEN 33

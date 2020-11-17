@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_PARAM_ACK_TRANSACTION 19
 
-
+MAVPACKED(
 typedef struct __mavlink_param_ack_transaction_t {
  float param_value; /*<  Parameter value (new value if PARAM_ACCEPTED, current value otherwise)*/
  uint8_t target_system; /*<  Id of system that sent PARAM_SET message.*/
@@ -11,7 +11,7 @@ typedef struct __mavlink_param_ack_transaction_t {
  char param_id[16]; /*<  Parameter id, terminated by NULL if the length is less than 16 human-readable chars and WITHOUT null termination (NULL) byte if the length is exactly 16 chars - applications have to provide 16+1 bytes storage if the ID is stored as string*/
  uint8_t param_type; /*<  Parameter type.*/
  uint8_t param_result; /*<  Result code.*/
-} mavlink_param_ack_transaction_t;
+}) mavlink_param_ack_transaction_t;
 
 #define MAVLINK_MSG_ID_PARAM_ACK_TRANSACTION_LEN 24
 #define MAVLINK_MSG_ID_PARAM_ACK_TRANSACTION_MIN_LEN 24

@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_IMAGE_STATUS 275
 
-
+MAVPACKED(
 typedef struct __mavlink_camera_tracking_image_status_t {
  float point_x; /*<  Current tracked point x value if CAMERA_TRACKING_POINT (normalized 0..1, 0 is left, 1 is right), NAN if unknown*/
  float point_y; /*<  Current tracked point y value if CAMERA_TRACKING_POINT (normalized 0..1, 0 is top, 1 is bottom), NAN if unknown*/
@@ -15,7 +15,7 @@ typedef struct __mavlink_camera_tracking_image_status_t {
  uint8_t tracking_status; /*<  Current tracking status*/
  uint8_t tracking_mode; /*<  Current tracking mode*/
  uint8_t target_data; /*<  Defines location of target data*/
-} mavlink_camera_tracking_image_status_t;
+}) mavlink_camera_tracking_image_status_t;
 
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_IMAGE_STATUS_LEN 31
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_IMAGE_STATUS_MIN_LEN 31

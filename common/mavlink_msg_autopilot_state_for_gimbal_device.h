@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_AUTOPILOT_STATE_FOR_GIMBAL_DEVICE 286
 
-
+MAVPACKED(
 typedef struct __mavlink_autopilot_state_for_gimbal_device_t {
  uint64_t time_boot_us; /*< [us] Timestamp (time since system boot).*/
  float q[4]; /*<  Quaternion components of autopilot attitude: w, x, y, z (1 0 0 0 is the null-rotation, Hamilton convention).*/
@@ -17,7 +17,7 @@ typedef struct __mavlink_autopilot_state_for_gimbal_device_t {
  uint8_t target_system; /*<  System ID*/
  uint8_t target_component; /*<  Component ID*/
  uint8_t landed_state; /*<  The landed state. Is set to MAV_LANDED_STATE_UNDEFINED if landed state is unknown.*/
-} mavlink_autopilot_state_for_gimbal_device_t;
+}) mavlink_autopilot_state_for_gimbal_device_t;
 
 #define MAVLINK_MSG_ID_AUTOPILOT_STATE_FOR_GIMBAL_DEVICE_LEN 53
 #define MAVLINK_MSG_ID_AUTOPILOT_STATE_FOR_GIMBAL_DEVICE_MIN_LEN 53

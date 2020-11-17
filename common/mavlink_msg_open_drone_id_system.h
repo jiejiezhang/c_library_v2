@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SYSTEM 12904
 
-
+MAVPACKED(
 typedef struct __mavlink_open_drone_id_system_t {
  int32_t operator_latitude; /*< [degE7] Latitude of the operator. If unknown: 0 (both Lat/Lon).*/
  int32_t operator_longitude; /*< [degE7] Longitude of the operator. If unknown: 0 (both Lat/Lon).*/
@@ -18,7 +18,7 @@ typedef struct __mavlink_open_drone_id_system_t {
  uint8_t classification_type; /*<  Specifies the classification type of the UA.*/
  uint8_t category_eu; /*<  When classification_type is MAV_ODID_CLASSIFICATION_TYPE_EU, specifies the category of the UA.*/
  uint8_t class_eu; /*<  When classification_type is MAV_ODID_CLASSIFICATION_TYPE_EU, specifies the class of the UA.*/
-} mavlink_open_drone_id_system_t;
+}) mavlink_open_drone_id_system_t;
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SYSTEM_LEN 46
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_SYSTEM_MIN_LEN 46

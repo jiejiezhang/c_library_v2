@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_SET_MANUAL_CONTROL 288
 
-
+MAVPACKED(
 typedef struct __mavlink_gimbal_manager_set_manual_control_t {
  uint32_t flags; /*<  High level gimbal manager flags.*/
  float pitch; /*<  Pitch angle unitless (-1..1, positive: up, negative: down, NaN to be ignored).*/
@@ -13,7 +13,7 @@ typedef struct __mavlink_gimbal_manager_set_manual_control_t {
  uint8_t target_system; /*<  System ID*/
  uint8_t target_component; /*<  Component ID*/
  uint8_t gimbal_device_id; /*<  Component ID of gimbal device to address (or 1-6 for non-MAVLink gimbal), 0 for all gimbal device components. Send command multiple times for more than one gimbal (but not all gimbals).*/
-} mavlink_gimbal_manager_set_manual_control_t;
+}) mavlink_gimbal_manager_set_manual_control_t;
 
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_SET_MANUAL_CONTROL_LEN 23
 #define MAVLINK_MSG_ID_GIMBAL_MANAGER_SET_MANUAL_CONTROL_MIN_LEN 23

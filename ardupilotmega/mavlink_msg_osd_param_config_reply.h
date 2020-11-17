@@ -3,11 +3,11 @@
 
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG_REPLY 11034
 
-
+MAVPACKED(
 typedef struct __mavlink_osd_param_config_reply_t {
  uint32_t request_id; /*<  Request ID - copied from request.*/
  uint8_t result; /*<  Config error type.*/
-} mavlink_osd_param_config_reply_t;
+}) mavlink_osd_param_config_reply_t;
 
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG_REPLY_LEN 5
 #define MAVLINK_MSG_ID_OSD_PARAM_CONFIG_REPLY_MIN_LEN 5

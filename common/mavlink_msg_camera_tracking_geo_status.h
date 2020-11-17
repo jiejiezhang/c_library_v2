@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_GEO_STATUS 276
 
-
+MAVPACKED(
 typedef struct __mavlink_camera_tracking_geo_status_t {
  int32_t lat; /*< [degE7] Latitude of tracked object*/
  int32_t lon; /*< [degE7] Longitude of tracked object*/
@@ -18,7 +18,7 @@ typedef struct __mavlink_camera_tracking_geo_status_t {
  float hdg; /*< [rad] Heading in radians, in NED. NAN if unknown*/
  float hdg_acc; /*< [rad] Accuracy of heading, in NED. NAN if unknown*/
  uint8_t tracking_status; /*<  Current tracking status*/
-} mavlink_camera_tracking_geo_status_t;
+}) mavlink_camera_tracking_geo_status_t;
 
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_GEO_STATUS_LEN 49
 #define MAVLINK_MSG_ID_CAMERA_TRACKING_GEO_STATUS_MIN_LEN 49

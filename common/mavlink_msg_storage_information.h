@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_STORAGE_INFORMATION 261
 
-
+MAVPACKED(
 typedef struct __mavlink_storage_information_t {
  uint32_t time_boot_ms; /*< [ms] Timestamp (time since system boot).*/
  float total_capacity; /*< [MiB] Total capacity. If storage is not ready (STORAGE_STATUS_READY) value will be ignored.*/
@@ -16,7 +16,7 @@ typedef struct __mavlink_storage_information_t {
  uint8_t status; /*<  Status of storage*/
  uint8_t type; /*<  Type of storage*/
  char name[32]; /*<  Textual storage name to be used in UI (microSD 1, Internal Memory, etc.) This is a NULL terminated string. If it is exactly 32 characters long, add a terminating NULL. If this string is empty, the generic type is shown to the user.*/
-} mavlink_storage_information_t;
+}) mavlink_storage_information_t;
 
 #define MAVLINK_MSG_ID_STORAGE_INFORMATION_LEN 60
 #define MAVLINK_MSG_ID_STORAGE_INFORMATION_MIN_LEN 27

@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_WINCH_STATUS 9005
 
-
+MAVPACKED(
 typedef struct __mavlink_winch_status_t {
  uint64_t time_usec; /*< [us] Timestamp (synced to UNIX time or since system boot).*/
  float line_length; /*< [m] Length of line released. NaN if unknown*/
@@ -13,7 +13,7 @@ typedef struct __mavlink_winch_status_t {
  float current; /*< [A] Current draw from the winch. NaN if unknown*/
  uint32_t status; /*<  Status flags*/
  int16_t temperature; /*< [degC] Temperature of the motor. INT16_MAX if unknown*/
-} mavlink_winch_status_t;
+}) mavlink_winch_status_t;
 
 #define MAVLINK_MSG_ID_WINCH_STATUS_LEN 34
 #define MAVLINK_MSG_ID_WINCH_STATUS_MIN_LEN 34

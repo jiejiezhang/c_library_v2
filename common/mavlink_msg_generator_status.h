@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_GENERATOR_STATUS 373
 
-
+MAVPACKED(
 typedef struct __mavlink_generator_status_t {
  uint64_t status; /*<  Status flags.*/
  float battery_current; /*< [A] Current into/out of battery. Positive for out. Negative for in. NaN: field not provided.*/
@@ -16,7 +16,7 @@ typedef struct __mavlink_generator_status_t {
  uint16_t generator_speed; /*< [rpm] Speed of electrical generator or alternator. UINT16_MAX: field not provided.*/
  int16_t rectifier_temperature; /*< [degC] The temperature of the rectifier or power converter. INT16_MAX: field not provided.*/
  int16_t generator_temperature; /*< [degC] The temperature of the mechanical motor, fuel cell core or generator. INT16_MAX: field not provided.*/
-} mavlink_generator_status_t;
+}) mavlink_generator_status_t;
 
 #define MAVLINK_MSG_ID_GENERATOR_STATUS_LEN 42
 #define MAVLINK_MSG_ID_GENERATOR_STATUS_MIN_LEN 42

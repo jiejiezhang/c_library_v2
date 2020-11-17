@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_CELLULAR_CONFIG 336
 
-
+MAVPACKED(
 typedef struct __mavlink_cellular_config_t {
  uint8_t enable_lte; /*<  Enable/disable LTE. 0: setting unchanged, 1: disabled, 2: enabled. Current setting when sent back as a response.*/
  uint8_t enable_pin; /*<  Enable/disable PIN on the SIM card. 0: setting unchanged, 1: disabled, 2: enabled. Current setting when sent back as a response.*/
@@ -13,7 +13,7 @@ typedef struct __mavlink_cellular_config_t {
  char puk[16]; /*<  Required PUK code in case the user failed to authenticate 3 times with the PIN. Empty when message is sent back as a response.*/
  uint8_t roaming; /*<  Enable/disable roaming. 0: setting unchanged, 1: disabled, 2: enabled. Current setting when sent back as a response.*/
  uint8_t response; /*<  Message acceptance response (sent back to GS).*/
-} mavlink_cellular_config_t;
+}) mavlink_cellular_config_t;
 
 #define MAVLINK_MSG_ID_CELLULAR_CONFIG_LEN 84
 #define MAVLINK_MSG_ID_CELLULAR_CONFIG_MIN_LEN 84

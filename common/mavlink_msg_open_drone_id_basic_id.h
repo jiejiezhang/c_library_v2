@@ -3,7 +3,7 @@
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_BASIC_ID 12900
 
-
+MAVPACKED(
 typedef struct __mavlink_open_drone_id_basic_id_t {
  uint8_t target_system; /*<  System ID (0 for broadcast).*/
  uint8_t target_component; /*<  Component ID (0 for broadcast).*/
@@ -11,7 +11,7 @@ typedef struct __mavlink_open_drone_id_basic_id_t {
  uint8_t id_type; /*<  Indicates the format for the uas_id field of this message.*/
  uint8_t ua_type; /*<  Indicates the type of UA (Unmanned Aircraft).*/
  uint8_t uas_id[20]; /*<  UAS (Unmanned Aircraft System) ID following the format specified by id_type. Shall be filled with nulls in the unused portion of the field.*/
-} mavlink_open_drone_id_basic_id_t;
+}) mavlink_open_drone_id_basic_id_t;
 
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_BASIC_ID_LEN 44
 #define MAVLINK_MSG_ID_OPEN_DRONE_ID_BASIC_ID_MIN_LEN 44
